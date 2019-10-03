@@ -1,0 +1,9 @@
+.multicolumn-textarea {
+  display: flex;
+  flex-direction: row;
+  textarea {
+    column-width: 14em;
+    height: 200px;
+    resize: none;
+  }
+}
