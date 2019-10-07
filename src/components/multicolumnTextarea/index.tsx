@@ -9,9 +9,7 @@ interface Props {
   columns?: number
 }
 
-interface State {}
-
-export default class MulticolumnTextarea extends React.Component<Props, State> {
+export default class MulticolumnTextarea extends React.Component<Props> {
   static defaultProps: Pick<Props, 'columns'> = {
     columns: 1
   }
@@ -22,7 +20,6 @@ export default class MulticolumnTextarea extends React.Component<Props, State> {
     super(props)
 
     this.contentEditable = React.createRef()
-    this.state = {}
   }
 
   onChangeValue = (event: any) => {
@@ -47,7 +44,7 @@ export default class MulticolumnTextarea extends React.Component<Props, State> {
     const { columns } = this.props
 
     return (
-      <div className="form-group multicolumn-textarea">
+      <div className="multicolumn-textarea">
         <ContentEditable
           innerRef={this.contentEditable}
           html={this.escapedValue}

@@ -1,6 +1,8 @@
 .multicolumn-textarea {
   display: flex;
   flex-direction: row;
+  padding: 10px;
+
   textarea {
     column-width: 14em;
     height: 200px;
